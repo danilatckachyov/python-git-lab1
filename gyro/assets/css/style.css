@@ -1,0 +1,627 @@
+@font-face {
+    font-family: "GardensC";
+    src: url("fonts/GardensC.otf");
+}
+*{
+    font-family: "GardensC";
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+label{
+    margin: 0 !important;
+}
+body{
+    position: relative;
+}
+a{
+    color: inherit;
+}
+a:hover{
+    color:inherit;
+    text-decoration: none;
+}
+section.panel{
+    width: 100%;
+    padding: 0 130px;
+}
+.section-title{
+    font-size: 50px;
+    color: #3d67b0;
+    text-align: center;
+}
+.text-upper {
+    text-transform: uppercase;
+}
+
+.site-name {
+    font-size: 80px;
+}
+
+.btn-order {
+    background: #fff;
+    color: #3467b0;
+    padding: 15px 25px;
+    border: solid 2px #fff;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    transition: .5s ease-in-out;
+}
+
+.btn-order:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.btn-white-big {
+    background-color: #fff;
+    color: #3467b0;
+    padding: 19px 45px;
+    border: solid 2px #fff;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+.btn-white-big:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-slider {
+    width: 50px;
+    padding: 5px;
+    background: transparent;
+}
+
+.btn-slider:focus {
+    box-shadow: none;
+}
+
+.delimiter {
+    width: 100%;
+}
+
+.btn.btn-primary {
+    background: #3467b0 !important;
+    border: #3467b0 !important;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+.btn-up {
+    position: fixed;
+    right: 35px;
+    bottom: 25px;
+    z-index: 110;
+    padding: 15px;
+}
+
+.btn-up img {
+    width: 25px;
+}
+section#first-page {
+    height: 100vh;
+    color: #fff;
+    background-image: url("../img/first-page-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+section#first-page > header {
+    width: 100%;
+    color: #fff;
+}
+
+section#first-page .logo img {
+    width: 100px;
+}
+
+section#first-page .contact > .item p {
+    font-size: 12px;
+}
+
+section#first-page .contact > .item img {
+    width: 25px;
+    margin-right: 15px;
+}
+
+section#first-page .nav {
+    list-style-type: none;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+section#first-page .nav li {
+    padding-left: 35px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+section#first-page .nav li:first-of-type {
+    padding-left: 0;
+}
+
+section#first-page .nav li:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transition: .5s ease-in-out;
+}
+
+section#first-page .nav li:hover:after {
+    width: 50%;
+}   
+section#advantages{
+    background: transparent;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+section#advantages .slider {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+
+  section#advantages .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    z-index: 0;
+  }
+  
+  section#advantages .item img {
+    max-height: 180px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  section#advantages .item p {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #3467b0;
+  }
+  
+  section#advantages input[type="radio"] {
+    display: none;
+  }
+
+  section#advantages input[type="radio"]:checked + .item {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+  }
+  
+
+  section#advantages .nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  section#advantages .nav label {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  section#advantages #adv1:checked ~ .nav label[for="adv1"],
+  section#advantages #adv2:checked ~ .nav label[for="adv2"],
+  section#advantages #adv3:checked ~ .nav label[for="adv3"],
+  section#advantages #adv4:checked ~ .nav label[for="adv4"] {
+    background: #3467b0;
+  }
+section#advantages .section title{
+    font-size: 300px;
+}
+
+section#about-us{
+    color: #fff;
+    margin-bottom: 100px;
+    height: 150vh;
+    background: url("../img/about-us-bg.png") center no-repeat;
+    background-size: 100% 100%;
+}
+section#partners .item{
+    font-size: 50px;
+    cursor: default;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: #fff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(-100%);
+    transition-duration: .4s;
+    opacity: 1;
+}
+section#partners .item p {
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    color: #C5C5C5;
+}
+
+section#partners .item:hover {
+    color: #3467B0;
+}
+
+section#partners input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+}
+
+section#partners input[type="radio"]:checked + .partners-label {
+    border: solid 1px #3467b0;
+    background-color: #3467b0;
+}
+
+section#partners input[type="radio"]:checked ~ .item {
+    transform: translateX(100%);
+}
+
+section#partners input[type="radio"]:checked + .partners-label + .item {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section#partners .partners-label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 1px #6660e0;
+    cursor: pointer;
+    margin: 10px !important;
+    transition: .5s ease-in-out;
+}
+
+section#partners #brand-container {
+    overflow: hidden;
+    position: relative;
+}
+section#consultants{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+section#consultants .item{
+    height: 100%;
+    width: 50%;
+}
+section#consultants .item img{
+    height: 200px;
+}
+section#consultants .item .item-title{
+    color: #3467b0;
+    margin-top: 15px;
+    font-size: 25px;
+}
+section#consultants .item .item-description{
+    margin-top: 5px;
+    font-size: 17px;
+}
+section#about-segway {
+    margin-top: 150px;
+    position: relative;
+}
+
+section#about-segway .section-image {
+    height: 300px;
+}
+
+section#about-segway .title {
+    font-size: 30px;
+    color: #3467b0;
+}
+
+section#about-segway .title img {
+    margin-right: 15px;
+    width: 30px;
+}
+
+section#about-segway ol {
+    margin-top: 25px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+section#catalog {
+    padding-top: 100px;
+}
+
+section#catalog .categories {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+section#catalog .categories ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#catalog input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+section#catalog #giroscooters:checked ~ .categories #giroscooters-tab,
+section#catalog #electric_scooters:checked ~ .categories #electric_scooters-tab,
+section#catalog #segways:checked ~ .categories #segways-tab {
+    color: #fff;
+    background: #3d67b0;
+}
+
+section#catalog #giroscooters:checked ~ .panels #giroscooters-container,
+section#catalog #electric_scooters:checked ~ .panels #electric_scooters-container,
+section#catalog #segways:checked ~ .panels #segways-container {
+    display: flex;
+}
+
+section#catalog .categories li label {
+    display: inline-block;
+    user-select: none;
+    padding: 15px 25px;
+    border: solid 2px #3d67b0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #3d67b0;
+    transition: .5s ease-in-out;
+}
+
+section#catalog .categories li {
+    margin-left: 25px;
+}
+
+section#catalog .categories li:first-of-type {
+    margin: 0;
+}
+
+section#catalog .catalog-container {
+    display: none;
+}
+
+section#catalog .catalog-container .c-card {
+    width: 320px;
+    border: solid 1px #e1e1e1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+section#catalog .catalog-container .c-card img {
+    width: 90%;
+    margin-top: 25px;
+}
+
+section#catalog .catalog-container .c-card .type span {
+    display: inline-block;
+    border-radius: 5px;
+    background: #3d67b0;
+    color: #fff;
+    padding: 1px 7px;
+    margin: 0 15px;
+}
+
+section#catalog .catalog-container .c-card .price-container {
+    padding: 0 15px;
+    margin-top: 15px;
+}
+
+section#catalog .catalog-container .c-card .price-container .price {
+    color: #3d67b0;
+    font-size: 20px;
+}
+section#useful-info {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+section#useful-info .u-content {
+    margin-top: 80px;
+}
+
+section#useful-info .content .item {
+    width: 100%;
+    height: 100%;
+}
+
+section#useful-info .content .item img.item-img {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 350px;
+}
+
+section#useful-info .content .item .title {
+    font-size: 30px;
+    color: #3467b0;
+    margin: 15px 0;
+}
+section#sub {
+    height: 100vh;
+    margin-bottom: 15vh;
+    background: url("../img/sub-bg.png") center no-repeat;
+    background-size: 100% 100%;
+}
+footer {
+    height: 30vh;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    top: calc(100% - 15vh);
+    left: 0;
+}
+
+footer .nav {
+    list-style-type: none;
+    display: flex;
+    color: #3467b0;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+footer .nav li {
+    padding-left: 35px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .nav li:first-of-type {
+    padding-left: 0;
+}
+
+footer .nav li:after {
+    content: "";
+    height: 5px;
+    width: 0;
+    background-color: #3467b0;
+    transition: .5s ease-in-out;
+}
+
+footer .nav li:hover::after {
+    width: 50%;
+}
+
+footer .footer-logo img {
+    width: 250px;
+}
+
+footer .contact > .item p {
+    font-size: 12px;
+}
+
+footer .contact > .item img {
+    width: 25px;
+    margin-right: 15px;
+}
+
+footer .social-icons img {
+    width: 35px;
+    cursor: pointer;
+}
+.catalog-container {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    /* 1. Уменьшаем боковые отступы для всего сайта */
+    section.panel {
+        padding: 0 40px; /* Было 130px, станет 40px */
+    }
+
+    /* 2. Исправляем шапку */
+    header.container {
+        flex-direction: column; /* Элементы в столбик */
+        align-items: center;    /* Выравниваем по центру */
+        padding-bottom: 20px;
+    }
+
+    header .contact {
+        margin: 20px 0; /* Добавляем вертикальные отступы */
+    }
+
+    /* 3. Уменьшаем гигантский заголовок */
+    .site-name {
+        font-size: 50px; /* Был 80px */
+        text-align: center;
+    }
+
+    /* 4. Адаптируем блок "О нас" */
+    section#about-us {
+        height: auto; /* Убираем фиксированную высоту */
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    section#about-us ol {
+        padding-left: 20px; /* Уменьшаем отступ у списка */
+    }
+
+    /* 5. Исправляем карточки в каталоге */
+    #catalog .catalog-container {
+        justify-content: center; /* Карточки по центру, если не влезают в ряд */
+        gap: 20px; /* Добавляем расстояние между карточками */
+    }
+
+    #catalog .catalog-container .c-card {
+        width: 45%; /* Делаем карточки по 2 в ряд */
+        min-width: 300px; /* Минимальная ширина, чтобы не сжимались слишком сильно */
+    }
+    
+    /* 6. Адаптируем блок "Особенности гироскутеров" */
+    #about-segway .content {
+        flex-direction: column; /* Картинку и текст в столбик */
+        align-items: center;
+        text-align: center;
+    }
+
+    #about-segway .content .text-upper {
+        width: 100%; /* Текст занимает всю ширину */
+        margin-top: 30px;
+    }
+    
+    #about-segway .title {
+        text-align: center; /* Заголовки тоже по центру */
+    }
+
+    /* 7. Исправляем футер (подвал) */
+    footer .h-100.d-flex {
+        flex-direction: column; /* Элементы в столбик */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    footer .nav {
+        margin: 20px 0;
+    }
+}
+
+/* Для мобильных устройств, чтобы карточки были в один столбик */
+@media (max-width: 768px) {
+    #catalog .catalog-container .c-card {
+        width: 90%; /* На маленьких экранах карточка занимает почти всю ширину */
+    }
+}
